@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Code Generator</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <style>
+        /* Dark mode styles */
+        body.dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .dark-mode #output {
+            background-color: #222;
+            color: #fff;
+        }
+
+        .dark-mode #output code {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <form method="POST" class="my-4">
+        <div class="form-group">
+            <label for="api_key">API Key:</label>
+            <input type="text" id="api_key" name="api_key" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="tasks">Tasks (comma-separated):</label>
+            <input type="text" id="tasks" name="tasks" class="form-control">
+        </div>
+        <input type="submit" value="Submit" class="btn btn-primary">
+    </form>
+
+    {% if result %}
+        <h2 class="my-4">Result:</h2>
+        <div id="output" class="border p-3">
+            <!-- Render result in Markdown -->
+            <div id="markdown-output">{{ result }}</div>
+        </div>
+    {% endif %}
+</div>
+
+<script>
+    hljs.highlightAll();
+
+    // Markdown rendering
+    var converter = new showdown.Converter();
+    var outputElement = document.getElementById('output');
+    var resultElement = document.getElementById('markdown-output');
+    var resultText = resultElement.innerHTML.trim();
+    var resultHtml = converter.makeHtml(resultText);
+    resultElement.innerHTML = resultHtml;
+
+    // Dark mode toggle
+    var bodyElement = document.body;
+    var darkModeToggle = document.createElement('button');
+    darkModeToggle.innerText = 'Toggle Dark Mode';
+    darkModeToggle.addEventListener('click', function() {
+        bodyElement.classList.toggle('dark-mode');
+    });
+
+    // Append dark mode toggle button to container
+    var containerElement = document.querySelector('.container');
+    containerElement.insertBefore(darkModeToggle, containerElement.firstChild);
+</script>
+
+</body>
+</html>
