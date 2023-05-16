@@ -30,8 +30,10 @@ The project has the following structure:
    ```bash
    git clone https://github.com/washingtonBrewologist/TextToPython.git
 
-Navigate to the project directory.
-
+2. Navigate to the project directory.
+```bash
+cd TextToPython
+```
 Install the required dependencies:
 Note: Create a Conda Env if you know what your doing!
 
