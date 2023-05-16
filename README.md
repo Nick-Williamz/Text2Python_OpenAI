@@ -28,13 +28,12 @@ The project has the following structure:
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/english-to-python-code-translation.git
-Navigate to the project directory:
 
-```bash
-cd english-to-python-code-translation
-```
+Navigate to the project directory.
 
 Install the required dependencies:
+Note: Create a Conda Env if you know what your doing!
+
 ```bash
 pip install -r requirements.txt
 ```
