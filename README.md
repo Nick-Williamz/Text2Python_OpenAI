@@ -1,6 +1,51 @@
-# TextToPython
-English to Python Code Translation with OpenAIs GPT-3.5-Turbo and Flask
+# English to Python Code Translation
 
-Have you ever wanted to create a new application, but you didn't know where to start? Or maybe you wanted to add a new feature to an existing application, but you didn't have the time or the skills to write the code. If so, then you're in luck! In this tutorial, we're going to show you how to build a web application that can transform English tasks into Python code.
+This project is a web application that translates English tasks into Python code using OpenAI's GPT-3.5-Turbo language model and Flask, a Python web framework.
 
-With recent advancements in artificial intelligence and natural language processing, this dream is becoming a reality. In this tutorial, we will explore the exciting prospect of building a web application that harnesses the power of OpenAI's GPT-3.5-Turbo language model and Flask, a popular Python web framework, to achieve the transformation of English tasks into Python code.
+## Table of Contents
+- [Introduction](#introduction)
+- [Prerequisites](#prerequisites)
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [Usage](#usage)
+
+## Introduction
+As developers, we often come across situations where we need to translate English instructions or tasks into executable code. This web application leverages the power of AI to automate this translation process, saving time and effort.
+
+## Prerequisites
+Before getting started, make sure you have the following prerequisites:
+- OpenAI API access and API key
+- Python installed on your machine
+- Flask installed in your Python environment
+
+## Project Structure
+The project has the following structure:
+- `text2py_webui.py`: Python file containing the Flask application code
+- `templates/home.html`: HTML template for rendering the output
+- `README.md`: Project documentation (you're reading it!)
+
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/english-to-python-code-translation.git
+Navigate to the project directory:
+
+```bash
+cd english-to-python-code-translation
+```
+
+Install the required dependencies:
+```bash
+pip install -r requirements.txt
+```
+## Usage
+Run the Flask application:
+
+```bash
+python text2python.py
+```
+
+Access the application in your browser at http://localhost:5000.
+
+Enter your API key and tasks in English.
+Submit the form to generate the corresponding Python code.
