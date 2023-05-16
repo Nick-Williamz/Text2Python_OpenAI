@@ -28,7 +28,7 @@ The project has the following structure:
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/english-to-python-code-translation.git
+   git clone https://github.com/washingtonBrewologist/TextToPython.git
 
 Navigate to the project directory.
 
@@ -42,7 +42,7 @@ pip install -r requirements.txt
 Run the Flask application:
 
 ```bash
-python text2python.py
+python text2py_webui.py
 ```
 
 Access the application in your browser at http://localhost:5000.
