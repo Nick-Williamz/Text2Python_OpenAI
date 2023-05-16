@@ -34,7 +34,7 @@ The project has the following structure:
 ```bash
 cd TextToPython
 ```
-Install the required dependencies:
+3. Install the required dependencies:
 Note: Create a Conda Env if you know what your doing!
 
 ```bash
