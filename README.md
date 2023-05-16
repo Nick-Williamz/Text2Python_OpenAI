@@ -20,6 +20,7 @@ Before getting started, make sure you have the following prerequisites:
 
 ## Project Structure
 The project has the following structure:
+- `requirements.txt`: Required Modules
 - `text2py_webui.py`: Python file containing the Flask application code
 - `templates/home.html`: HTML template for rendering the output
 - `README.md`: Project documentation (you're reading it!)
